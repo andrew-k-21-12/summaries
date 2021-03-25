@@ -1071,7 +1071,7 @@ Start the search with specifying the bad and good anchor commits:
 Then run `bisect` in the auto mode: `git bisect run test-error.sh`.
 
 
-## Submodules.
+## Submodules
 
 1. `git submodule add [url]` - to add a submodule into a project.
 In the end of this command a path to place the submodule can be added.
