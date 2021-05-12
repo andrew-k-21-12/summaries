@@ -449,9 +449,9 @@ git checkout -b rubyclient jessica/ruby-client # creating a local branch for a r
 After that it's a good idea to check which commits were added in the PR:
 `git log master..rubyclient -p`: `-p` to see commits' diffs.
 
-2. `git fetch -p` to remove all local branches which are removed in remote.
+2. `git fetch -p` to remove all local **remote-tracking** branches which are removed in remote.
 `git remote prune [repo]` does the same for a specific remote `repo` without fetch.
-These commands remove only remote-tracking branches.
+These commands remove **only remote-tracking** branches, not simple local branches.
 
 3. `git pull [repo_url] [branch_name]` to do one-time pull from the remote repo
 with `repo_url` without adding this remote repo to the list of your remotes.
