@@ -19,7 +19,7 @@ Further commit will include only those updates were done before `git add`.
 - `?`: stands for one symbol;
 - `[0-9]`: any symbol from the range;
 - `a/**/z`: any nested folders between `a` and `z`;
-- `/TODO`: ignores only the root `TODO` file.
+- `/TODO`: ignores only the root `TODO` file (the same works for directories as well).
 
 5. `.git/info/exclude` does the same as `.gitignore`,
 but is not included into the repo.
@@ -1251,6 +1251,11 @@ Settings are stored in simple text files can be edited by hand.
 6. Configure `help.autocorrect` to automatically correct misspellings in commands.
 
 7. See `color.*` configs to adjust color schemes in Git.
+
+8. To get a global `.gitignore` for the current user:
+`git config --global --get core.excludesfile`,
+to set (update) it:
+`git config --global core.excludesfile ~/.gitignore_global`
 
 
 ## Formatting and whitespaces
