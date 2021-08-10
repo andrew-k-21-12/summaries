@@ -113,6 +113,9 @@ To create a post factum tag (for some old commit), use:
 5. To send your tags to the remote repo, use
 `git push origin [tag]` or `git push origin --tags` to send all local tags.
 
+6. Sorting customization is possible when querying tags, for example:
+`git tag --sort=-creatordate`.
+
 
 ## Aliases
 
