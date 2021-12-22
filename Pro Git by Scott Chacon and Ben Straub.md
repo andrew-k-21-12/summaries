@@ -753,7 +753,7 @@ better prefer `git stash --all`.
 You can also check what will be deleted without actual deletion:
 `git clean -n`.
 Use `-x` parameter to remove ignored files too.
-Use `-i` for interactive step-by-step mode.
+Use `-i` for interactive step-by-step mode (very helpful for small working dir restorations).
 
 
 ## Signing
