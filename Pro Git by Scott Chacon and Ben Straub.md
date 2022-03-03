@@ -1008,6 +1008,9 @@ The way with subtrees is more difficult and error-prone.
 18. The usual diff will not work in the case of subtrees,
 use instead: `git diff-tree -p rack_branch`.
 
+19. It's possible to do interactive merging with step by step hunks comparison by:
+`git checkout -p target_branch_to_merge --`.
+
 
 ## Command rerere
 
