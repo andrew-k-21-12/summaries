@@ -613,7 +613,7 @@ and generate a new token for it.
 Markers are more configurable rather than regular login-pass access.
 Using auth increases the allowed rate of requests per hour.
 
-4. It's possible to store large files outside the remote repository with 
+4. It's possible to store large files outside the repository (both local and remote) with 
 [Git Large File Storage](https://git-lfs.github.com/).
 LFS replaces large files such as audio samples, videos, datasets, and graphics 
 with text pointers inside Git, 
