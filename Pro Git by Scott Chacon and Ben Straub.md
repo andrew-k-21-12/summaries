@@ -28,6 +28,8 @@ but is not included into the repo.
 It will be empty for files after `git add` executed for them.
 To see changes between staged files and their latest committed versions,
 use `git diff --staged`.
+To see the contents of a deleted file when this update is staged,
+use `git diff --cached -- [file]`
 
 7. Simple removal `rm` doesn't stage the result of this operation.
 To make the removal be staged for commit, use `git rm`.
