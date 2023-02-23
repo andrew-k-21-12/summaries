@@ -620,6 +620,8 @@ Using auth increases the allowed rate of requests per hour.
 LFS replaces large files such as audio samples, videos, datasets, and graphics 
 with text pointers inside Git, 
 while storing the file contents on a remote server like GitHub.com or GitHub Enterprise.
+By using such text pointers, the actual files are getting removed (most likely) from the Git index
+(with all corresponding consequences).
 
 
 # Git tools
@@ -706,6 +708,29 @@ git reset --patch      # to partially reset files from the index
 git checkout --patch
 git stash save --patch
 ```
+
+15. When using merging to pull the latest updates from a target branch into a feature branch,
+all merge commits and commits merged from the target branch 
+are getting included into outputs of `git diff` and `git log` commands 
+if the difference between two commits with a merge commit in between 
+is requested at the feature branch.
+For `git log` it's possible to use:
+- `--no-merges`: to exclude merge commits only;
+- `--first-parent`: to exclude all commits pulled into the feature branch from the target branch
+in the result of intermediate merges.
+But even with `-p` only updates for particular commits are going to be shown.
+This difference is not smart: when merge and related commits are excluded,
+all intermediate updates done during the merge commit are excluded as well.
+The reason for all this is that `git diff` works only with two nodes: 
+it can not show the difference between two commits 
+also excluding all updates matching the target branch.
+
+16. As a workaround to solve the problem above 
+(the problem is that to see all differences between two commits of a feature branch 
+excluding updates coming from intermediate merges which are common with the target branch), 
+it's possible to create a temporary branch 
+with everything before the first commit of the interest merged into it
+and compare (`git diff`) the latest state of the feature branch with this temporary branch.
 
 
 ## Stashing
