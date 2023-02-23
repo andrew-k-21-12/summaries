@@ -731,6 +731,10 @@ excluding updates coming from intermediate merges which are common with the targ
 it's possible to create a temporary branch 
 with everything before the first commit of the interest merged into it
 and compare (`git diff`) the latest state of the feature branch with this temporary branch.
+The only caveat of such approach is that if there are merge conflicts,
+they should be resolved for this merging into the temporary branch anyway.
+But for simplification in resolving the conflicting places 
+it's possible to prefer the target branch's versions everywhere.
 
 
 ## Stashing
