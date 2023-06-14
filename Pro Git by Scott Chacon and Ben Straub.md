@@ -54,6 +54,12 @@ Two files: one added, one removed, - having less than 50% of differences
 (in terms of Git's indexes) are treated as renaming of the same file.
 To avoid losing of the history, it is possible to do 2 commits when renaming is needed:
 one - with the renaming itself and the other - with all required corresponding content updates.
+It's very easy to miss such updates while resolving merge conflicts
+when in one branch some file was updated and renamed (moved),
+in another - only updated (or renamed in a different way):
+usually Git writes something like *deleted by them* or *deleted by us* in such cases.
+The rule of thumb can be to look for pairs of added and deleted files
+and process them manually by doing 2 separate commits as described above.
 
 12. `git log -p -2` also shows commits' diffs
 and limits the output to the 2 latest commits.
