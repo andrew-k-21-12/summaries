@@ -104,6 +104,10 @@ To fetch all remotes, use `git fetch --all`.
 24. `git remote show [repo]` shows additional info about the target repo.
 `stale` means that the branch has been removed in the remote repo.
 
+25. It's possible to revert multiple commits in a row (if there are no merge commits!):
+`git revert --no-commit HEAD~4..`.
+`4` is a number of commits to be reverted. Don't forget to do a commit after it.
+
 
 ## Tags
 
