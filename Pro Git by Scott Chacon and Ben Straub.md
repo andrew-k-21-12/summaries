@@ -108,6 +108,10 @@ To fetch all remotes, use `git fetch --all`.
 `git revert --no-commit HEAD~4..`.
 `4` is a number of commits to be reverted. Don't forget to do a commit after it.
 
+26. It's possible to compare files from different branches 
+(helpful when some file was moved incorrectly):
+`git diff [branch]:[file] [file]`.
+
 
 ## Tags
 
