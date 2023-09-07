@@ -868,6 +868,9 @@ To use regular expressions in this search, use `-G` instead.
 6. To search for commits with updates of `git_deflate_bound` function in `zlib.c`:
 `git log -L :git_deflate_bound:zlib.c`.
 
+7. To search the entire history of a file (including its renames):
+`git log --follow -p -- [filename]`.
+
 
 ## Rewriting history
 
