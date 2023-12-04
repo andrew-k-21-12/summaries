@@ -810,6 +810,12 @@ You can also check what will be deleted without actual deletion:
 Use `-x` parameter to remove ignored files too.
 Use `-i` for interactive step-by-step mode (very helpful for small working dir restorations).
 
+12. It's possible to save current working dir or staged updates, 
+use `--binary` to include binary files (images, for example):
+`git diff [--cached] [--binary] > some.patch`.
+To load the patch:
+`git apply some.patch`.
+
 
 ## Signing
 
