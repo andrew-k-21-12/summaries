@@ -881,6 +881,11 @@ To use regular expressions in this search, use `-G` instead.
 7. To search the entire history of a file (including its renames):
 `git log --follow -p -- [filename]`.
 
+8. To search for some file in the entire history if the exact path is not known:
+`git log [-p] --all --full-history -- "**/file.*"`.
+`--all` makes sure all branches are included, 
+`--full-history` is needed to prevent some history from prunning.
+
 
 ## Rewriting history
 
