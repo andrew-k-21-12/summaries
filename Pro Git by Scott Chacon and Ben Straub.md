@@ -235,6 +235,8 @@ will get unmodified commits only from `master`
 and put only its own modified commits on top of it.
 After that `master` can merge commits from `client`,
 `client` will be totally detached from `server` now.
+Using such command is helpful when a feature branch has been started from a wrong parent branch:
+`git rebase --onto destination_correct_parent_branch source_wrong_parent_branch branch_to_be_moved`
 
 3. We can do rebasing regardless from the currently active branch with:
 `git rebase [main branch] [feature branch]`.
