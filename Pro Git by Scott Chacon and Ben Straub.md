@@ -817,6 +817,19 @@ use `--binary` to include binary files (images, for example):
 `git diff [--cached] [--binary] > some.patch`.
 To load the patch:
 `git apply some.patch`.
+Be careful: to make a patch apply, 
+the current codebase state should match the patch's captured source state,
+otherwise the patch won't be applied.
+This note is especially actual when resolving conflicts:
+additions like:
+```
+<<<<<<< HEAD
+// ...
+=======
+// ...
+>>>>>>> develop
+```
+should be cleaned up first with `git add`, `git checkout` and possibly other commands.
 
 
 ## Signing
